@@ -4,17 +4,20 @@ import { useLanguage } from '@/hooks/useLanguage';
 import heroBg from '@/assets/hero-bg.png';
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section
       className="relative min-h-[90vh] flex items-center justify-center pt-16 bg-[hsl(var(--brand-b800))] overflow-hidden"
       id="hero"
+      aria-label={language === 'en' ? 'Introduction' : 'Introducción'}
     >
-      <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay">
+      {/* Decorative background — hidden from assistive technology */}
+      <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay" aria-hidden="true">
         <img
           src={heroBg}
-          alt="Abstract geometric background"
+          alt=""
+          role="presentation"
           className="w-full h-full object-cover"
         />
       </div>
@@ -26,6 +29,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-wrap gap-4 mb-8"
+            aria-hidden="true"
           >
             {t.hero.tags.map((label, i) => (
               <span
@@ -47,14 +51,15 @@ export function Hero() {
             Fernando López
           </motion.h1>
 
-          <motion.h2
-            className="font-serif italic text-2xl md:text-4xl text-white/70 mb-10"
+          <motion.p
+            className="font-serif italic text-2xl md:text-4xl text-white/90 mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            aria-hidden="true"
           >
             fernandolopez.dev
-          </motion.h2>
+          </motion.p>
 
           <motion.p
             className="font-sans font-light text-xl md:text-2xl text-white/90 max-w-2xl mb-12 leading-relaxed"
@@ -71,7 +76,7 @@ export function Hero() {
             transition={{ duration: 0.4, delay: 0.2 }}
           >
             <button
-              className="btn-brand-cta"
+              className="btn-brand-cta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--brand-b800))]"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               data-testid="hero-cta-contact"
             >

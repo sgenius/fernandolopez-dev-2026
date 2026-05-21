@@ -9,8 +9,14 @@ import { Contact } from '@/components/Contact';
 export default function Home() {
   return (
     <div className="min-h-screen bg-[hsl(var(--brand-b50))] font-sans flex flex-col">
+      <a
+        href="#main-content"
+        className="skip-link"
+      >
+        Skip to main content
+      </a>
       <Nav />
-      <main className="flex-grow">
+      <main id="main-content" className="flex-grow" tabIndex={-1}>
         <Hero />
         <About />
         <Work />

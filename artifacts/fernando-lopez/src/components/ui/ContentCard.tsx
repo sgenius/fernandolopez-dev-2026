@@ -29,40 +29,40 @@ export function ContentCard({
 
   return (
     <Card className="flex flex-col h-full bg-[hsl(var(--brand-b50))] md:bg-white border border-[hsl(var(--brand-b100))] hover:shadow-md transition-shadow duration-300 p-6 md:p-8 rounded-none">
-      <div className="flex items-center space-x-2 mb-4">
+      <div className="flex items-center space-x-2 mb-4" aria-hidden="true">
         <span className="font-mono text-[10px] uppercase tracking-[0.06em] text-[hsl(var(--brand-b600))]">
           {type} {duration && `· ${duration}`}
         </span>
       </div>
-      
+
       <h3 className="font-sans font-medium text-lg md:text-xl text-[hsl(var(--brand-g900))] mb-3 leading-snug">
         {title}
       </h3>
-      
+
       <p className="font-sans font-light text-base text-[hsl(var(--brand-g700))] mb-8 flex-grow leading-relaxed">
         {description}
       </p>
-      
+
       <div className="flex items-center justify-between mt-auto pt-4 border-t border-[hsl(var(--brand-b100))]">
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2" aria-hidden="true">
           {topics.map((topic, i) => (
-            <Badge 
-              key={i} 
-              variant="outline" 
+            <Badge
+              key={i}
+              variant="outline"
               className="font-mono text-[10px] uppercase tracking-[0.06em] text-[hsl(var(--brand-b600))] border-[hsl(var(--brand-b200))] bg-[hsl(var(--brand-b50))] px-2 py-0.5 rounded-none font-normal"
             >
               {topic}
             </Badge>
           ))}
         </div>
-        
-        <a 
+
+        <a
           href={ctaLink}
-          className={`flex items-center space-x-2 font-sans font-medium text-sm transition-colors hover:opacity-80 ${ctaColorClass}`}
-          data-testid={`link-${title.toLowerCase().replace(/\s+/g, '-')}`}
+          className={`flex items-center space-x-2 font-sans font-medium text-sm transition-colors hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current focus-visible:ring-offset-1 rounded-sm ${ctaColorClass}`}
+          aria-label={`${ctaText} — ${title}`}
         >
           <span>{ctaText}</span>
-          <Icon className="w-4 h-4" />
+          <Icon className="w-4 h-4" aria-hidden="true" />
         </a>
       </div>
     </Card>

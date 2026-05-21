@@ -4,10 +4,14 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { ContentCard } from './ui/ContentCard';
 
 export function Work() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
-    <section id="work" className="section-gap bg-white">
+    <section
+      id="work"
+      className="section-gap bg-white"
+      aria-label={language === 'en' ? 'Projects and engineering work' : 'Proyectos y trabajo de ingeniería'}
+    >
       <div className="container mx-auto page-x">
         <motion.div
           className="flex flex-col md:flex-row md:items-end justify-between mb-16"
@@ -20,6 +24,7 @@ export function Work() {
             <span
               style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em' }}
               className="text-[hsl(var(--brand-b600))] uppercase mb-4 block"
+              aria-hidden="true"
             >
               {t.work.label}
             </span>
@@ -30,9 +35,9 @@ export function Work() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0">
           {t.work.projects.map((project, index) => (
-            <motion.div
+            <motion.li
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -48,9 +53,9 @@ export function Work() {
                 ctaLink="#"
                 isVideo={false}
               />
-            </motion.div>
+            </motion.li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

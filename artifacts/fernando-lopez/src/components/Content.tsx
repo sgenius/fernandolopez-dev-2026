@@ -5,10 +5,14 @@ import { ContentCard } from './ui/ContentCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function Content() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
-    <section id="content" className="section-gap bg-[hsl(var(--brand-b50))]">
+    <section
+      id="content"
+      className="section-gap bg-[hsl(var(--brand-b50))]"
+      aria-label={language === 'en' ? 'Articles and videos' : 'Artículos y videos'}
+    >
       <div className="container mx-auto page-x">
         <motion.div
           className="mb-16"
@@ -20,6 +24,7 @@ export function Content() {
           <span
             style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em' }}
             className="text-[hsl(var(--brand-b600))] uppercase mb-4 block"
+            aria-hidden="true"
           >
             {t.content.label}
           </span>
@@ -28,7 +33,10 @@ export function Content() {
 
         <Tabs defaultValue="articles" className="w-full">
           <div className="flex justify-center mb-12">
-            <TabsList className="bg-white border border-[hsl(var(--brand-b100))] rounded-none p-1">
+            <TabsList
+              className="bg-white border border-[hsl(var(--brand-b100))] rounded-none p-1"
+              aria-label={language === 'en' ? 'Content type' : 'Tipo de contenido'}
+            >
               <TabsTrigger
                 value="articles"
                 className="rounded-none font-mono uppercase text-xs tracking-wider px-8 py-3 data-[state=active]:bg-[hsl(var(--brand-b800))] data-[state=active]:text-white"
@@ -45,9 +53,9 @@ export function Content() {
           </div>
 
           <TabsContent value="articles" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0">
               {t.content.articles.map((article, index) => (
-                <motion.div
+                <motion.li
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -64,15 +72,15 @@ export function Content() {
                     ctaLink="#"
                     isVideo={false}
                   />
-                </motion.div>
+                </motion.li>
               ))}
-            </div>
+            </ul>
           </TabsContent>
 
           <TabsContent value="videos" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0">
               {t.content.videos.map((video, index) => (
-                <motion.div
+                <motion.li
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -89,9 +97,9 @@ export function Content() {
                     ctaLink="#"
                     isVideo={true}
                   />
-                </motion.div>
+                </motion.li>
               ))}
-            </div>
+            </ul>
           </TabsContent>
         </Tabs>
       </div>

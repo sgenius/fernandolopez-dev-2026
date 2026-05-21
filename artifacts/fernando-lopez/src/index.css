@@ -225,6 +225,43 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
+
+  /* WCAG 2.4.7 — visible focus indicator (amber, high contrast on both light and dark) */
+  :focus-visible {
+    outline: 3px solid hsl(38 95% 55%);
+    outline-offset: 3px;
+  }
+
+  /* WCAG 2.4.1 — skip-to-content link */
+  .skip-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-120%);
+    z-index: 9999;
+    background: hsl(38 95% 55%);
+    color: hsl(0 0% 8%);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 14px;
+    padding: 12px 24px;
+    transition: transform 200ms ease;
+    white-space: nowrap;
+  }
+  .skip-link:focus {
+    transform: translateX(-50%) translateY(0);
+    outline: 3px solid hsl(0 0% 8%);
+    outline-offset: 2px;
+  }
+}
+
+/* WCAG 2.3.3 — respect prefers-reduced-motion for non-Framer elements */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @layer utilities {
