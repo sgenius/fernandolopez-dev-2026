@@ -5,7 +5,7 @@ import heroBg from '@/assets/hero-bg.png';
 export function Hero() {
   return (
     <section 
-      className="relative min-h-[90vh] flex items-center justify-center pt-20 bg-[hsl(var(--brand-b800))] overflow-hidden"
+      className="relative min-h-[90vh] flex items-center justify-center pt-16 bg-[hsl(var(--brand-b800))] overflow-hidden"
       id="hero"
     >
       <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay">

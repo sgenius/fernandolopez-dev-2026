@@ -6,7 +6,7 @@ export function Contact() {
   return (
     <section id="contact" className="bg-[hsl(var(--brand-b900))] text-white pt-[44px] pb-12 border-t-8 border-[hsl(var(--brand-b800))]">
       <div className="container mx-auto page-x">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +14,7 @@ export function Contact() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-serif font-bold text-4xl md:text-5xl mb-6">Let's connect</h2>
-            <p className="font-sans font-light text-[hsl(var(--brand-b100))] text-lg leading-relaxed max-w-md mb-10">
+            <p className="font-sans font-light text-[hsl(var(--brand-b100))] text-lg leading-relaxed max-w-md mb-8">
               I'm always open to discussing engineering leadership, speaking opportunities, or architectural challenges.
             </p>
             
@@ -37,20 +37,20 @@ export function Contact() {
           >
             <div className="space-y-6">
               <div className="flex items-center space-x-4 border-b border-white/10 pb-6">
-                <Linkedin className="h-6 w-6 text-[hsl(var(--brand-b400))]" />
-                <a href="#" className="font-sans font-light text-lg hover:text-[hsl(var(--brand-b400))] transition-colors">
+                <Linkedin className="h-6 w-6 text-[hsl(var(--brand-b600))]" />
+                <a href="#" className="font-sans font-light text-lg hover:text-[hsl(var(--brand-b600))] transition-colors">
                   linkedin.com/in/fernandolopez
                 </a>
               </div>
               <div className="flex items-center space-x-4 border-b border-white/10 pb-6">
-                <Github className="h-6 w-6 text-[hsl(var(--brand-b400))]" />
-                <a href="#" className="font-sans font-light text-lg hover:text-[hsl(var(--brand-b400))] transition-colors">
+                <Github className="h-6 w-6 text-[hsl(var(--brand-b600))]" />
+                <a href="#" className="font-sans font-light text-lg hover:text-[hsl(var(--brand-b600))] transition-colors">
                   github.com/fernandolopez
                 </a>
               </div>
               <div className="flex items-center space-x-4 pb-6">
-                <Twitter className="h-6 w-6 text-[hsl(var(--brand-b400))]" />
-                <a href="#" className="font-sans font-light text-lg hover:text-[hsl(var(--brand-b400))] transition-colors">
+                <Twitter className="h-6 w-6 text-[hsl(var(--brand-b600))]" />
+                <a href="#" className="font-sans font-light text-lg hover:text-[hsl(var(--brand-b600))] transition-colors">
                   @fernandolopez
                 </a>
               </div>
@@ -58,9 +58,9 @@ export function Contact() {
           </motion.div>
         </div>
 
-        <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center text-[hsl(var(--brand-b200))] font-sans font-light text-sm">
-          <p>© {new Date().getFullYear()} Fernando Augusto López Plascencia. All rights reserved.</p>
-          <p className="mt-4 md:mt-0 font-mono text-xs uppercase tracking-widest text-[hsl(var(--brand-b400))]">fernandolopez.dev</p>
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[hsl(var(--brand-b200))] font-sans font-light text-sm">
+          <p>© {new Date().getFullYear()} Fernando López. All rights reserved.</p>
+          <p className="mt-4 md:mt-0 font-mono text-xs uppercase tracking-widest text-[hsl(var(--brand-b600))]">fernandolopez.dev</p>
         </div>
       </div>
     </section>

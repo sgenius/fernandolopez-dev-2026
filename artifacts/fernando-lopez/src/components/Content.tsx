@@ -71,7 +71,7 @@ export function Content() {
           transition={{ duration: 0.6 }}
         >
           <span className="font-mono text-[hsl(var(--brand-b600))] text-xs uppercase tracking-widest mb-4 block">Writing & Speaking</span>
-          <h2 className="font-serif font-bold text-4xl text-[hsl(var(--brand-b900))]">Ideas & Perspectives</h2>
+          <h2 className="font-serif font-bold text-4xl text-[hsl(var(--brand-b800))]">Ideas & Perspectives</h2>
         </motion.div>
 
         <Tabs defaultValue="articles" className="w-full">

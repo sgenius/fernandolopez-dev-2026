@@ -54,7 +54,7 @@ export function Work() {
         >
           <div>
             <span className="font-mono text-[hsl(var(--brand-b600))] text-xs uppercase tracking-widest mb-4 block">Selected Work</span>
-            <h2 className="font-serif font-bold text-4xl text-[hsl(var(--brand-b900))]">Projects & Engineering</h2>
+            <h2 className="font-serif font-bold text-4xl text-[hsl(var(--brand-b800))]">Projects & Engineering</h2>
           </div>
           <p className="font-sans font-light text-[hsl(var(--brand-g600))] max-w-md mt-6 md:mt-0 md:text-right">
             A selection of architectural implementations, open source contributions, and educational materials.

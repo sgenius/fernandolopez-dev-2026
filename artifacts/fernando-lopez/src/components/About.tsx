@@ -29,13 +29,13 @@ export function About() {
     <section id="about" className="section-gap bg-[hsl(var(--brand-b50))]">
       <div className="container mx-auto page-x">
         <motion.div 
-          className="max-w-4xl mb-20"
+          className="max-w-4xl mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif font-bold text-4xl md:text-5xl text-[hsl(var(--brand-b900))] leading-tight mb-8">
+          <h2 className="font-serif font-bold text-4xl md:text-5xl text-[hsl(var(--brand-b800))] leading-tight mb-8">
             Engineering with purpose,<br />
             <span className="italic font-normal text-[hsl(var(--brand-b800))]">always for the person.</span>
           </h2>
@@ -53,7 +53,7 @@ export function About() {
               className="flex flex-col"
             >
               <div className="flex items-center mb-4">
-                <span className="font-mono text-[hsl(var(--brand-b400))] text-sm mr-4">0{index + 1}</span>
+                <span className="font-mono text-[hsl(var(--brand-b600))] text-sm mr-4">0{index + 1}</span>
                 <h3 className="font-sans font-medium text-xl text-[hsl(var(--brand-g900))]">{value.title}</h3>
               </div>
               <p className="font-sans font-light text-base text-[hsl(var(--brand-g700))] leading-relaxed pl-8">
