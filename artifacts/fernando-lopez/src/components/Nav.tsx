@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 
 export function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,14 +48,13 @@ export function Nav() {
               {item}
             </button>
           ))}
-          <Button 
-            variant="outline" 
-            className="border-white text-white hover:bg-white hover:text-[hsl(var(--brand-b800))] font-sans font-medium rounded-none px-6 uppercase tracking-wider text-xs"
+          <button
+            className="btn-brand-outline-white text-xs"
             onClick={() => scrollTo('contact')}
             data-testid="nav-cta-contact"
           >
             Get in touch
-          </Button>
+          </button>
         </nav>
 
         {/* Mobile menu button could go here, omitting for brevity to focus on desktop/responsive scaling */}

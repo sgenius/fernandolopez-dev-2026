@@ -55,7 +55,9 @@
   --brand-b800: 219 91% 31%;
   --brand-b700: 217 84% 39%;
   --brand-b600: 217 67% 47%;
+  --brand-b500: 217 66% 54%;
   --brand-b400: 217 66% 61%;
+  --brand-b300: 217 70% 70%;
   --brand-b200: 217 73% 80%;
   --brand-b100: 217 76% 90%;
   --brand-b50: 217 71% 96%;
@@ -222,5 +224,145 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  /* Brand spacing — 52px page margin, 44px section gap */
+  .page-x {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+  @media (max-width: 768px) {
+    .page-x {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .section-gap {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+  .section-gap-lg {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  /* Brand button utilities */
+  .btn-brand-primary {
+    background-color: hsl(var(--brand-b800));
+    color: white;
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 150ms;
+  }
+  .btn-brand-primary:hover {
+    background-color: hsl(var(--brand-b700));
+  }
+
+  .btn-brand-primary-inverse {
+    background-color: white;
+    color: hsl(var(--brand-b800));
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 150ms;
+  }
+  .btn-brand-primary-inverse:hover {
+    background-color: hsl(var(--brand-b50));
+  }
+
+  .btn-brand-outline {
+    background-color: transparent;
+    color: hsl(var(--brand-b800));
+    border: 1.5px solid hsl(var(--brand-b800));
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 13px 32px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 150ms, color 150ms;
+  }
+  .btn-brand-outline:hover {
+    background-color: hsl(var(--brand-b800));
+    color: white;
+  }
+
+  .btn-brand-outline-white {
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid white;
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 13px 32px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 150ms, color 150ms;
+  }
+  .btn-brand-outline-white:hover {
+    background-color: white;
+    color: hsl(var(--brand-b800));
+  }
+
+  .btn-brand-ghost {
+    background-color: transparent;
+    color: hsl(var(--brand-b800));
+    font-family: var(--font-body);
+    font-weight: 400;
+    border-radius: 0;
+    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 150ms;
+  }
+  .btn-brand-ghost:hover {
+    color: hsl(var(--brand-b900));
+  }
+
+  .btn-brand-cta {
+    background-color: hsl(var(--brand-amber));
+    color: hsl(var(--brand-g900));
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 150ms;
+  }
+  .btn-brand-cta:hover {
+    opacity: 0.9;
+  }
+
+  /* DM Mono tag utility */
+  .brand-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: hsl(var(--brand-b600));
+    background-color: hsl(var(--brand-b50));
+    border: 1px solid hsl(var(--brand-b200));
+    padding: 3px 8px;
+    display: inline-flex;
   }
 }

@@ -26,8 +26,8 @@ const values = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-[hsl(var(--brand-b50))]">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="about" className="section-gap-lg bg-[hsl(var(--brand-b50))]">
+      <div className="container mx-auto page-x">
         <motion.div 
           className="max-w-4xl mb-20"
           initial={{ opacity: 0, y: 30 }}

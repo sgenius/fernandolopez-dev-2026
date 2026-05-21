@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.png';
 
 export function Hero() {
@@ -17,7 +16,7 @@ export function Hero() {
         />
       </div>
       
-      <div className="container mx-auto px-6 md:px-12 z-10 relative">
+      <div className="container mx-auto page-x z-10 relative">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -60,13 +59,25 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
           >
             <button 
-              style={{ backgroundColor: 'white', color: 'hsl(219, 91%, 31%)' }}
-              className="font-sans font-medium text-base rounded-none px-8 py-5 uppercase tracking-wider hover:bg-white/90 transition-colors"
+              style={{
+                backgroundColor: '#ffffff',
+                color: '#083F99',
+                fontFamily: 'var(--font-body)',
+                fontWeight: 500,
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+                borderRadius: 0,
+                padding: '14px 32px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                border: 'none',
+                cursor: 'pointer',
+              }}
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               data-testid="hero-cta-contact"
             >

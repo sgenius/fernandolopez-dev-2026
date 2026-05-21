@@ -1,12 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-[hsl(var(--brand-b900))] text-white pt-24 md:pt-32 pb-12 border-t-8 border-[hsl(var(--brand-b800))]">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="contact" className="bg-[hsl(var(--brand-b900))] text-white pt-[88px] pb-12 border-t-8 border-[hsl(var(--brand-b800))]">
+      <div className="container mx-auto page-x">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -19,15 +18,13 @@ export function Contact() {
               I'm always open to discussing engineering leadership, speaking opportunities, or architectural challenges.
             </p>
             
-            <a href="mailto:hello@fernandolopez.dev">
-              <Button 
-                size="lg"
-                className="bg-[hsl(var(--brand-b600))] hover:bg-[hsl(var(--brand-b700))] text-white font-sans font-medium text-base rounded-none px-8 py-6 uppercase tracking-wider"
-                data-testid="contact-email-button"
-              >
-                <Mail className="mr-3 h-5 w-5" />
-                hello@fernandolopez.dev
-              </Button>
+            <a
+              href="mailto:hello@fernandolopez.dev"
+              className="btn-brand-primary"
+              data-testid="contact-email-button"
+            >
+              <Mail className="mr-3 h-5 w-5" />
+              hello@fernandolopez.dev
             </a>
           </motion.div>
 

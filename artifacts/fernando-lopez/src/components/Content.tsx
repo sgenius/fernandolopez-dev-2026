@@ -61,8 +61,8 @@ const videos = [
 
 export function Content() {
   return (
-    <section id="content" className="py-24 md:py-32 bg-[hsl(var(--brand-b50))]">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="content" className="section-gap-lg bg-[hsl(var(--brand-b50))]">
+      <div className="container mx-auto page-x">
         <motion.div 
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
