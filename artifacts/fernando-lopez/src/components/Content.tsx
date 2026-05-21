@@ -70,7 +70,7 @@ export function Content() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="font-mono text-[hsl(var(--brand-b600))] text-xs uppercase tracking-widest mb-4 block">Writing & Speaking</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em' }} className="text-[hsl(var(--brand-b600))] uppercase mb-4 block">Writing & Speaking</span>
           <h2 className="font-serif font-bold text-4xl text-[hsl(var(--brand-b800))]">Ideas & Perspectives</h2>
         </motion.div>
 

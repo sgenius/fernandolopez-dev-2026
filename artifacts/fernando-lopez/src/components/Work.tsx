@@ -53,7 +53,7 @@ export function Work() {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <span className="font-mono text-[hsl(var(--brand-b600))] text-xs uppercase tracking-widest mb-4 block">Selected Work</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em' }} className="text-[hsl(var(--brand-b600))] uppercase mb-4 block">Selected Work</span>
             <h2 className="font-serif font-bold text-4xl text-[hsl(var(--brand-b800))]">Projects & Engineering</h2>
           </div>
           <p className="font-sans font-light text-[hsl(var(--brand-g600))] max-w-md mt-6 md:mt-0 md:text-right">

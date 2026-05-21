@@ -25,7 +25,7 @@ export function Hero() {
             className="flex flex-wrap gap-4 mb-8"
           >
             {['ENGINEERING', 'AI', 'PROFESSIONAL DEVELOPMENT'].map((label, i) => (
-              <span key={i} className="font-mono text-white/80 text-xs md:text-sm uppercase tracking-[0.1em] border border-white/20 px-3 py-1">
+              <span key={i} style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em' }} className="text-white/80 uppercase border border-white/20 px-2 py-1">
                 {label}
               </span>
             ))}
@@ -64,20 +64,7 @@ export function Hero() {
             transition={{ duration: 0.4, delay: 0.2 }}
           >
             <button 
-              style={{
-                backgroundColor: 'hsl(38 95% 55%)',
-                color: 'hsl(0 0% 8%)',
-                fontFamily: 'var(--font-body)',
-                fontWeight: 500,
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase',
-                borderRadius: 0,
-                padding: '14px 32px',
-                display: 'inline-flex',
-                alignItems: 'center',
-                border: 'none',
-                cursor: 'pointer',
-              }}
+              className="btn-brand-cta"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               data-testid="hero-cta-contact"
             >
