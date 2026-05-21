@@ -1,21 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/hooks/useLanguage';
 import heroBg from '@/assets/hero-bg.png';
 
 export function Hero() {
+  const { t } = useLanguage();
+
   return (
-    <section 
+    <section
       className="relative min-h-[90vh] flex items-center justify-center pt-16 bg-[hsl(var(--brand-b800))] overflow-hidden"
       id="hero"
     >
       <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay">
-        <img 
-          src={heroBg} 
-          alt="Abstract geometric background" 
+        <img
+          src={heroBg}
+          alt="Abstract geometric background"
           className="w-full h-full object-cover"
         />
       </div>
-      
+
       <div className="container mx-auto page-x z-10 relative">
         <div className="max-w-4xl">
           <motion.div
@@ -24,14 +27,18 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-wrap gap-4 mb-8"
           >
-            {['ENGINEERING', 'AI', 'PROFESSIONAL DEVELOPMENT'].map((label, i) => (
-              <span key={i} style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em' }} className="text-white/80 uppercase border border-white/20 px-2 py-1">
+            {t.hero.tags.map((label, i) => (
+              <span
+                key={i}
+                style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em' }}
+                className="text-white/80 uppercase border border-white/20 px-2 py-1"
+              >
                 {label}
               </span>
             ))}
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             className="font-serif font-bold text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +46,7 @@ export function Hero() {
           >
             Fernando López
           </motion.h1>
-          
+
           <motion.h2
             className="font-serif italic text-2xl md:text-4xl text-white/70 mb-10"
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +62,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            Staff Software Developer · Professor · Content creator
+            {t.hero.roles}
           </motion.p>
 
           <motion.div
@@ -63,12 +70,12 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
           >
-            <button 
+            <button
               className="btn-brand-cta"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               data-testid="hero-cta-contact"
             >
-              Get in touch
+              {t.hero.cta}
             </button>
           </motion.div>
         </div>

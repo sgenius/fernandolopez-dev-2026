@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/hooks/useLanguage';
 import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
 
 export function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="bg-[hsl(var(--brand-b900))] text-white pt-[44px] pb-12 border-t-8 border-[hsl(var(--brand-b800))]">
       <div className="container mx-auto page-x">
@@ -13,11 +16,11 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-serif font-bold text-4xl md:text-5xl mb-6">Let's connect</h2>
+            <h2 className="font-serif font-bold text-4xl md:text-5xl mb-6">{t.contact.heading}</h2>
             <p className="font-sans font-light text-[hsl(var(--brand-b100))] text-lg leading-relaxed max-w-md mb-8">
-              I'm always open to discussing engineering leadership, speaking opportunities, or architectural challenges.
+              {t.contact.subheading}
             </p>
-            
+
             <a
               href="mailto:hello@fernandolopez.dev"
               className="btn-brand-primary"
@@ -59,8 +62,13 @@ export function Contact() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[hsl(var(--brand-b200))] font-sans font-light text-sm">
-          <p>© {new Date().getFullYear()} Fernando López. All rights reserved.</p>
-          <p className="mt-4 md:mt-0 font-mono text-xs uppercase tracking-widest text-[hsl(var(--brand-b600))]">fernandolopez.dev</p>
+          <p>© {new Date().getFullYear()} Fernando López. {t.contact.copyright}</p>
+          <p
+            className="mt-4 md:mt-0 uppercase text-[hsl(var(--brand-b600))]"
+            style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em' }}
+          >
+            fernandolopez.dev
+          </p>
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ export interface ContentCardProps {
   duration?: string;
   title: string;
   description: string;
-  topics: string[];
+  topics: readonly string[];
   ctaText: string;
   ctaLink: string;
   isVideo?: boolean;
