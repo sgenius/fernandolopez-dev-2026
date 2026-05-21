@@ -61,7 +61,7 @@ const videos = [
 
 export function Content() {
   return (
-    <section id="content" className="section-gap-lg bg-[hsl(var(--brand-b50))]">
+    <section id="content" className="section-gap bg-[hsl(var(--brand-b50))]">
       <div className="container mx-auto page-x">
         <motion.div 
           className="mb-16"

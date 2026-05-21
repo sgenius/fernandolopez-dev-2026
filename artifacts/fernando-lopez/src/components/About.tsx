@@ -26,7 +26,7 @@ const values = [
 
 export function About() {
   return (
-    <section id="about" className="section-gap-lg bg-[hsl(var(--brand-b50))]">
+    <section id="about" className="section-gap bg-[hsl(var(--brand-b50))]">
       <div className="container mx-auto page-x">
         <motion.div 
           className="max-w-4xl mb-20"

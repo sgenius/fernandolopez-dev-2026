@@ -4,7 +4,7 @@ import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-[hsl(var(--brand-b900))] text-white pt-[88px] pb-12 border-t-8 border-[hsl(var(--brand-b800))]">
+    <section id="contact" className="bg-[hsl(var(--brand-b900))] text-white pt-[44px] pb-12 border-t-8 border-[hsl(var(--brand-b800))]">
       <div className="container mx-auto page-x">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
           <motion.div

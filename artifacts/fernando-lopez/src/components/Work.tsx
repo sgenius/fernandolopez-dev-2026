@@ -43,7 +43,7 @@ const projects = [
 
 export function Work() {
   return (
-    <section id="work" className="section-gap-lg bg-white">
+    <section id="work" className="section-gap bg-white">
       <div className="container mx-auto page-x">
         <motion.div 
           className="flex flex-col md:flex-row md:items-end justify-between mb-16"

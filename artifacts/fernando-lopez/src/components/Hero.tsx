@@ -65,8 +65,8 @@ export function Hero() {
           >
             <button 
               style={{
-                backgroundColor: '#ffffff',
-                color: '#083F99',
+                backgroundColor: 'hsl(38 95% 55%)',
+                color: 'hsl(0 0% 8%)',
                 fontFamily: 'var(--font-body)',
                 fontWeight: 500,
                 letterSpacing: '0.06em',
