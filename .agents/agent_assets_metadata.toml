@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "r5aqRUSX7_8Iso722Tp2O"
+uri = "file://artifacts/fernando-lopez/src/assets/hero-bg.png"
+type = "image"
+title = "Abstract blue geometric shapes"
