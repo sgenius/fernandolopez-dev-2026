@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Projects",
+    "about": "About"
+  },
+  "home": {
+    "headline": "Fernando",
+    "tagline": "Staff engineer, educator, and builder. Engineering with purpose, always for the person.",
+    "ctaProjects": "See projects →",
+    "ctaBlog": "Read the blog",
+    "recentLabel": "Content",
+    "recentTitle": "Recent work"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Read more",
+    "minuteRead": "{minutes} min read"
+  },
+  "projects": {
+    "title": "Projects"
+  }
+}

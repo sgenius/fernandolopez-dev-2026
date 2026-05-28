@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "projects": "Proyectos",
+    "about": "Acerca de"
+  },
+  "home": {
+    "headline": "Fernando",
+    "tagline": "Ingeniero senior, educador y constructor. Ingeniería con propósito, siempre para la persona.",
+    "ctaProjects": "Ver proyectos →",
+    "ctaBlog": "Leer el blog",
+    "recentLabel": "Contenido",
+    "recentTitle": "Trabajo reciente"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Leer más",
+    "minuteRead": "{minutes} min de lectura"
+  },
+  "projects": {
+    "title": "Proyectos"
+  }
+}
