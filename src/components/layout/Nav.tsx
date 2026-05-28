@@ -30,8 +30,8 @@ export function Nav({ locale }: NavProps) {
       </a>
       <nav className="site-nav" aria-label="Main navigation">
         <div className="nav-inner">
-          <Link href="/" className="nav-logo" aria-label="Fernando López — home">
-            <span className="nav-logo-name">Fernando López</span>
+          <Link href="/" className="nav-logo" aria-label="Fernando L&oacute;pez — home">
+            <span className="nav-logo-name">Fernando L&oacute;pez</span>
             <span className="nav-logo-domain" aria-hidden="true">fernandolopez.dev</span>
           </Link>
 
@@ -50,9 +50,7 @@ export function Nav({ locale }: NavProps) {
 
           <nav className="nav-locale" aria-label="Language switcher">
             {locales.map((l) => {
-              const targetPath = l === "en"
-                ? localelessPath
-                : `/${l}${localelessPath === "/" ? "" : localelessPath}`;
+              const targetPath = `/${l}${localelessPath === "/" ? "" : localelessPath}`;
               return (
                 <Link key={l} href={targetPath} aria-current={l === locale ? "true" : undefined} lang={l}>
                   {l.toUpperCase()}

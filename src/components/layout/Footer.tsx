@@ -14,11 +14,13 @@ export function Footer({ locale }: FooterProps) {
 
   return (
     <footer className="site-footer" role="contentinfo">
-      <div>
-        <div className="footer-brand-name">Fernando López</div>
-        <div className="footer-brand-domain">fernandolopez.dev</div>
+      <div className="footer-wrapper">
+        <div className="footer-brand">
+          <div className="footer-brand-name">Fernando López</div>
+          <div className="footer-brand-domain">fernandolopez.dev</div>
+        </div>
+        <div className="footer-note">{note}</div>
       </div>
-      <div className="footer-note">{note}</div>
     </footer>
   );
 }
