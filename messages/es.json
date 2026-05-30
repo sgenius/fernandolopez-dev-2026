@@ -1,9 +1,7 @@
 {
   "nav": {
     "home": "Inicio",
-    "projects": "Proyectos",
-    "publications": "Publicaciones",
-    "contact": "Contacto"
+    "contact": "Conectemos"
   },
   "home": {
     "headline": "Fernando",
@@ -12,7 +10,8 @@
     "bioTitle2": "siempre para la persona.",
     "shortBio1": "Tengo más de 20 años de experiencia como desarrollador de software especializado en desarrollo web. Me importa la comunidad, hacer las cosas bien y motivar a otros a ser mejores.",
     "shortBio2": "Vivo en el Área de la Bahía de San Francisco. Nací y crecí en Mexicali, México.",
-    "shortBio3": "Es un privilegio enseñar actualmente un curso centrado en la experiencia del usuario en Northeastern University, Campus Oakland."
+    "shortBio3": "Es un privilegio enseñar actualmente un curso centrado en la experiencia del usuario en Northeastern University, Campus Oakland.",
+    "profileImageAlt": "Una foto de Fernando López sonriendo y mirando a la cámara."
   },
   "projects": {
     "title": "Proyectos",

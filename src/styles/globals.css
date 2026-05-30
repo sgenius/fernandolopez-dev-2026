@@ -256,6 +256,17 @@ main {
 .hero-name { font-family: var(--font-serif); font-size: clamp(2.5rem, 6vw, 3.625rem); font-weight: 700; color: #fff; line-height: 1.0; }
 .hero-name-italic { font-family: var(--font-serif); font-size: clamp(2.5rem, 6vw, 3.625rem); font-weight: 400; font-style: italic; color: var(--b200); line-height: 1.05; display: block; margin-bottom: var(--space-lg); }
 .hero-tagline { font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 300; color: var(--b200); max-width: 30rem; line-height: 1.65; }
+.hero-cta {
+  margin-top: var(--space-2xl);
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+.hero-cta a.btn-amber {
+  border-color: var(--b200);
+  color: var(--b50);
+  font-size: 1rem;
+}
 
 /* sections */
 .section { padding: var(--section-gap) 0; }
@@ -296,6 +307,26 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+.profile-image {
+  display: none;
+}
+
+@media (min-width: 40rem) {
+  .profile-image {
+    display: block;
+    border-radius: 50%;
+    
+    object-fit: cover;
+    object-position: center center;
+
+    border: 2px solid var(--b50);
+    margin-left: var(--space-lg);
+    width: 200px;
+    height: 200px;
+    float: right;
   }
 }
 
@@ -363,6 +394,11 @@ main {
 
 .contact-link-text {
   margin-left: 1rem;
+}
+
+#section-contact a.contact-calendly-link {
+  background: var(--amber);
+  color: var(--amber-l);
 }
 
 /* cards */
@@ -449,7 +485,7 @@ main {
 }
 .btn-ghost { background: transparent; color: var(--b600); border: 0.0312rem solid var(--b200); }
 .btn-ghost:hover { background: var(--b50); }
-.btn-amber { background: var(--amber); color: #fff; }
+.btn-amber, a.btn-amber { background: var(--amber); color: #fff; }
 .btn-amber:hover { background: #a84e06; color: #fff; }
 
 /* footer */

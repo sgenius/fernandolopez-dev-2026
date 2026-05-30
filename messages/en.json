@@ -1,9 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "projects": "Projects",
-    "publications": "Publications",
-    "contact": "Contact"
+    "contact": "Let's connect"
   },
   "home": {
     "headline": "Fernando",
@@ -12,7 +10,8 @@
     "bioTitle2": "Always for the Person.",
     "shortBio1": "I have 20+ years of experience as a software developer specialized in web development. I care about community, doing things well, and pushing others to be a better version of themselves.",
     "shortBio2": "I am based in the San Francisco Bay Area. I was born and raised in Mexicali, México.",
-    "shortBio3": "It is my privilege to currently teach an UX-centered course at Northeastern University, Oakland Campus."
+    "shortBio3": "It is my privilege to currently teach an UX-centered course at Northeastern University, Oakland Campus.",
+    "profileImageAlt": "A photo of Fernando López smiling and looking at the camera."
   },
   "projects": {
     "title": "Projects",

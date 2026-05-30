@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,8 +17,6 @@ export default function HomePage() {
     return ["tag0", "tag1"].map((tagKey) => {
       try {
         const tagValue = translator(`${path}.${tagKey}`);
-        console.log(`Fetched tag for path: ${path}.${tagKey} - Value: ${tagValue}`);
-        console.log(`Checking if tagValue includes tagKey: ${tagValue.includes(tagKey)}`);
         return !tagValue.includes(path) ? 
         (
           <span className="tag tag-blue" key={tagKey}>
@@ -44,6 +43,11 @@ export default function HomePage() {
             <span className="hero-name-italic">L&oacute;pez</span>
           </h1>
           <p className="hero-tagline">{t("tagline")}</p>
+          <div className="hero-cta">
+            <Link href="/#contact" className="btn btn-amber">
+              {tContact("title")}
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -51,7 +55,7 @@ export default function HomePage() {
       <div className="block-wrapper" id="block-wrapper-aboutme">
         <section className="section" aria-labelledby="section-aboutme">
           <h2 className="section-title" id="section-aboutme">{t("bioTitle1")}<br /><span className="section-title-italic">{t("bioTitle2")}</span></h2>
-          {/* here goes a photo aligned right */}
+          <Image src="/images/profile.jpg" alt={t("profileImageAlt")} width={200} height={200} className="profile-image" />
           <p>{t("shortBio1")}</p>
           <p>{t("shortBio2")}</p>
           <p>{t("shortBio3")}</p>
@@ -75,7 +79,7 @@ export default function HomePage() {
                     <hr className="card-divider" />
                     <section className={`card-description-lower external-link-${projectKey === "tapestry" ? "external" : "internal"}`}>
                       {projectKey === "tapestry" ? tProjects("visitProject") : tProjects("viewProject")}{` `}
-                      <span className="boxicons--arrow-out-up-right-square svg-icon-sm"></span>
+                      {projectKey === "tapestry" ? <span className="boxicons--arrow-out-up-right-square svg-icon-sm"></span> : null}
                     </section>
                     <section className="tags">
                       {generateTagsOutput(tProjects, projectKey)}
@@ -130,6 +134,7 @@ export default function HomePage() {
       </div>
 
       {/* Contact */}
+      <span id="contact" className="anchor"></span>
       <div className="block-wrapper" id="block-wrapper-contact">
         <section className="section" id="section-contact">
           <div className="col">
@@ -152,7 +157,7 @@ export default function HomePage() {
                 </a>
               </li>
               <li className="contact-item contact-calendly">
-                <a href="https://calendly.com/fa-lopez/30min" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/fa-lopez/30min" target="_blank" rel="noopener noreferrer" className="contact-calendly-link">
                   <span className="boxicons--calendar svg-icon-lg"></span>
                   <span className="contact-link-text">{tContact("consultation")}</span>
                 </a>
