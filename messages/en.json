@@ -1,24 +1,83 @@
 {
   "nav": {
     "home": "Home",
-    "blog": "Blog",
     "projects": "Projects",
-    "about": "About"
+    "publications": "Publications",
+    "contact": "Contact"
   },
   "home": {
     "headline": "Fernando",
-    "tagline": "Staff engineer, educator, and builder. Engineering with purpose, always for the person.",
-    "ctaProjects": "See projects →",
-    "ctaBlog": "Read the blog",
-    "recentLabel": "Content",
-    "recentTitle": "Recent work"
-  },
-  "blog": {
-    "title": "Blog",
-    "readMore": "Read more",
-    "minuteRead": "{minutes} min read"
+    "tagline": "Staff Software Developer · Professor · Content Creator",
+    "bioTitle1": "Engineering with Purpose,",
+    "bioTitle2": "Always for the Person.",
+    "shortBio1": "I have 20+ years of experience as a software developer specialized in web development. I care about community, doing things well, and pushing others to be a better version of themselves.",
+    "shortBio2": "I am based in the San Francisco Bay Area. I was born and raised in Mexicali, México.",
+    "shortBio3": "It is my privilege to currently teach an UX-centered course at Northeastern University, Oakland Campus."
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "slug": "A collection of experiments and explorations in engineering and design.",
+    "visitProject": "Visit project",
+    "viewProject": "View project",
+    "countries": {
+      "tag0": "Next.js",
+      "tag1": "Performance",
+      "title": "The World's Countries",
+      "slug": "A quick reference and an experiment on static deployment.",
+      "url": "/projects/countries"
+    },
+    "mosaic": {
+      "tag0": "Canvas",
+      "tag1": "Interactive",
+      "title": "Mosaic",
+      "slug": "A browser for real maps of imaginary places.",
+      "url": "/projects/mosaic"
+    },
+    "tapestry": {
+      "tag0": "Animation",
+      "tag1": "Performance",
+      "tag2": "Art",
+      "title": "Unicode Tapestry",
+      "slug": "An animated toy inspired by retro sci-fi interfaces.",
+      "url": "https://bi3vr.csb.app/"
+    }
+  },
+  "publications": {
+    "title": "Ideas & Perspectives",
+    "slug": "Essays and reflections in written and video formats.",
+    "readMore": "Read the full article",
+    "watchVideo": "Watch the video",
+    "pubs": {
+      "0": {
+        "tag0": "Career Development",
+        "tag1": "AI",
+        "title": "The T-Shaped Developer: Thriving in an AI-Driven Job Market",
+        "slug": "How should the software developer think about their career development in an AI-driven job market? Explore the concept of the T-shaped developer and how it can help you drive your career effectively.",
+        "url": "https://medium.com/@fa.lopez/the-t-shaped-developer-thriving-in-an-ai-driven-job-market-fa9d9ea6cd45",
+        "type": "article"
+      },
+      "1": {
+        "tag0": "Career Development",
+        "tag1": "AI",
+        "title": "Use Your Expertise To Get Hired Sooner",
+        "slug": "Your T-shaped expertise means you already have what employers are looking for.",
+        "url": "https://www.instagram.com/fa.lopez.swe/reel/DYeGOH_Mub8/",
+        "type": "video"
+      },
+      "2": {
+        "tag0": "Accessibility",
+        "tag1": "Web Development",
+        "title": "Accessibility is misunderstood: What the WebAIM Million study tells us",
+        "slug": "Most websites still have poor accessibility. Why is that, and how can we fix it in our own products?",
+        "url": "https://medium.com/@fa.lopez/accessibility-is-misunderstood-what-the-webaim-million-study-tells-us-077617d26ab5",
+        "type": "article"
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's connect",
+    "intro1": "Let's talk about user-centered products, UX, leadership, and education in engineering.",
+    "intro2": "One-on-One mentoring  ·  Group consultations  ·  Open talks",
+    "consultation": "Schedule a 30 minute consultation"
   }
 }

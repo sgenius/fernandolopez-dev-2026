@@ -1,24 +1,83 @@
 {
   "nav": {
     "home": "Inicio",
-    "blog": "Blog",
     "projects": "Proyectos",
-    "about": "Acerca de"
+    "publications": "Publicaciones",
+    "contact": "Contacto"
   },
   "home": {
     "headline": "Fernando",
-    "tagline": "Ingeniero senior, educador y constructor. Ingeniería con propósito, siempre para la persona.",
-    "ctaProjects": "Ver proyectos →",
-    "ctaBlog": "Leer el blog",
-    "recentLabel": "Contenido",
-    "recentTitle": "Trabajo reciente"
-  },
-  "blog": {
-    "title": "Blog",
-    "readMore": "Leer más",
-    "minuteRead": "{minutes} min de lectura"
+    "tagline": "Ingeniero de software staff · Educador  · Creador de contenido",
+    "bioTitle1": "Ingeniería con propósito,",
+    "bioTitle2": "siempre para la persona.",
+    "shortBio1": "Tengo más de 20 años de experiencia como desarrollador de software especializado en desarrollo web. Me importa la comunidad, hacer las cosas bien y motivar a otros a ser mejores.",
+    "shortBio2": "Vivo en el Área de la Bahía de San Francisco. Nací y crecí en Mexicali, México.",
+    "shortBio3": "Es un privilegio enseñar actualmente un curso centrado en la experiencia del usuario en Northeastern University, Campus Oakland."
   },
   "projects": {
-    "title": "Proyectos"
+    "title": "Proyectos",
+    "slug": "Una colección de experimentos y exploraciones en ingeniería y diseño.",
+    "visitProject": "Visitar proyecto",
+    "viewProject": "Ver proyecto",
+    "countries": {
+      "tag0": "Next.js",
+      "tag1": "Desempeño",
+      "title": "Los países del mundo",
+      "slug": "Una referencia rápida y un experimento en despliegue estático.",
+      "url": "/projects/countries"
+    },
+    "mosaic": {
+      "tag0": "Canvas",
+      "tag1": "Interactividad",
+      "title": "Mosaico",
+      "slug": "Un navegador para mapas reales de lugares imaginarios.",
+      "url": "/projects/mosaic"
+    },
+    "tapestry": {
+      "tag0": "Animación",
+      "tag1": "Desempeño",
+      "tag2": "Arte",
+      "title": "El tapiz Unicode",
+      "slug": "Un juguete animado inspirado en interfaces retrofuturistas.",
+      "url": "https://bi3vr.csb.app/"
+    }
+  },
+  "publications": {
+    "title": "Ideas y perspectivas",
+    "slug": "Ensayos y reflexiones en formatos escritos y de video.",
+    "readMore": "Lee el artículo completo",
+    "watchVideo": "Ve el video",
+    "pubs": {
+      "0": {
+        "tag0": "Desarrollo profesional",
+        "tag1": "IA",
+        "title": "The T-Shaped Developer: Thriving in an AI-Driven Job Market (en inglés)",
+        "slug": "Cómo debería el desarrollador de software pensar sobre su desarrollo profesional en el mercado laboral de hoy? Explora el concepto de la experiencia en forma de T y cómo te ayuda a impulsar tu carrera.",
+        "url": "https://medium.com/@fa.lopez/the-t-shaped-developer-thriving-in-an-ai-driven-job-market-fa9d9ea6cd45",
+        "type": "article"
+      },
+      "1": {
+        "tag0": "Desarrollo profesional",
+        "tag1": "IA",
+        "title": "Encuentra trabajo más pronto usando tu experiencia actual",
+        "slug": "Tu experiencia en forma de T significa que ya tienes lo que las empresas buscan.",
+        "url": "https://www.instagram.com/sgenius0/reel/DYnVCwuy871/",
+        "type": "video"
+      },
+      "2": {
+        "tag0": "Accesibilidad",
+        "tag1": "Desarrollo web",
+        "title": "La accesibilidad web es incomprendida: Aprendizajes del estudio WebAIM Million",
+        "slug": "La mayor parte de los sitios web todavía tienen una accesibilidad deficiente. ¿Por qué, y cómo solucionarlo en nuestros propios productos?",
+        "url": "https://medium.com/@fa.lopez/la-accesibilidad-web-es-incomprendida-aprendizajes-del-estudio-webaim-million-5e82cd4937f4",
+        "type": "article"
+      }
+    }
+  },
+  "contact": {
+    "title": "Conectemos",
+    "intro1": "Platiquemos sobre productos centrados en el usuario, UX, liderazgo y educación en ingeniería.",
+    "intro2": "Mentoría personalizada  ·  Mentoría grupal  ·  Charlas abiertas",
+    "consultation": "Agenda una consulta de 30 minutos"
   }
 }

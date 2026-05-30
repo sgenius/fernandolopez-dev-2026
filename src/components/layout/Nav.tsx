@@ -15,18 +15,16 @@ export function Nav({ locale }: NavProps) {
 
   const links = [
     { href: "/", label: t("home") },
-    { href: "/blog", label: t("blog") },
-    { href: "/projects", label: t("projects") },
-    { href: "/about", label: t("about") },
+    { href: "/#contact", label: t("contact") },
   ];
 
   // Normalize pathname: strip locale prefix for comparison
-  const localelessPath = pathname.replace(/^\/(es|pt)/, "") || "/";
+  const localelessPath = pathname.replace(/^\/(es)/, "") || "/";
 
   return (
     <header>
       <a href="#main-content" className="skip-link">
-        {locale === "es" ? "Ir al contenido" : locale === "pt" ? "Ir para o conteúdo" : "Skip to content"}
+        {locale === "es" ? "Ir al contenido" : "Skip to content"}
       </a>
       <nav className="site-nav" aria-label="Main navigation">
         <div className="nav-inner">
