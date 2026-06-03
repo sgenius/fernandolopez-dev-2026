@@ -1,0 +1,16 @@
+.ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+
+.regionName {
+  margin: var(--space-lg) 0 var(--space-md);
+}
+
+.regionSection {
+  margin-bottom: 2rem;
+}

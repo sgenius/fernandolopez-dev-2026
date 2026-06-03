@@ -23,7 +23,10 @@
       "tag1": "Performance",
       "title": "The World's Countries",
       "slug": "A quick reference and an experiment on static deployment.",
-      "url": "/projects/countries"
+      "url": "/projects/countries",
+      "intro1": "Before I loved web development, I loved geography. As a child, I used to buy  these yearly World Almanacs. This intends to be pretty much like that: a reference for the world's countries, with basic data to jumpstart a research session.",
+      "intro2": "This was created as an experiment to test the power of static websites. Data was consumed from the REST Countries API at compilation time. Due to API limitations, data is only available in English.",
+      "countryListTitle": "The Countries"
     },
     "mosaic": {
       "tag0": "Canvas",

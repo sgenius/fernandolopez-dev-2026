@@ -23,7 +23,11 @@
       "tag1": "Desempeño",
       "title": "Los países del mundo",
       "slug": "Una referencia rápida y un experimento en despliegue estático.",
-      "url": "/projects/countries"
+      "url": "/projects/countries",
+      "intro1": "Antes de que me gustara el desarrollo web ya amaba la geografía. De niño solía comprar anuarios mundiales. Esto pretende ser algo parecido: una referencia para los países del mundo, con datos básicos para iniciar una sesión de investigación.",
+      "intro2": "Este es un experimento que prueba el poder de los sitios web estáticos. Los datos fueron consumidos de la API REST Countries en tiempo de compilación. Debido a las limitaciones de la API, los datos solo están disponibles en inglés.",
+      "countryListTitle": "Los países"
+
     },
     "mosaic": {
       "tag0": "Canvas",

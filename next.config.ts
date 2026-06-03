@@ -19,6 +19,14 @@ const withMDX = createMDX({
 
 const nextConfig: NextConfig = {
   pageExtensions: ["ts", "tsx", "mdx"],
+  images: {
+    remotePatterns: [
+      new URL('https://flagcdn.com/**'),
+      new URL('http://flagcdn.com/**'),
+      new URL('https://mainfacts.com/media/images/coats_of_arms/**'),
+      new URL('http://mainfacts.com/media/images/coats_of_arms/**'),
+    ],
+  }
 };
 
 export default withNextIntl(withMDX(nextConfig));

@@ -1,0 +1,27 @@
+.countryLink {
+    display: inline-block;
+    border: 3px solid var(--b700);
+    border-width: 0 0 3px;
+    background: var(--b50);
+    padding: 0.2rem;
+    color: var(--b700);
+    font-variant: small-caps;
+}
+
+.countryLink:hover {
+    background: var(--b100);
+}
+
+.name {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.isDependency .name{
+    font-variant: normal;
+    font-style: italic;
+}
+
+.flag {
+    font-family: 'Twemoji Mozila', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'EmojiOne Color', 'Android Emoji', sans-serif;
+}

@@ -1,0 +1,6 @@
+.svg {
+    width: 100%;
+    height: auto;
+    fill: var(--b700);
+    stroke: var(--b300);
+}

@@ -1,0 +1,28 @@
+.hero {
+    background-color: var(--b700);
+    color: var(--b50);
+    padding-top: 4ch;
+}
+
+h1.sectionTitle {
+    font-size: clamp(2.25rem, 6vw, 6rem);
+    color: var(--b50);
+    margin-bottom: 0;
+}
+
+.titleSlug {
+    color: var(--b100);
+    font-size: 1.25rem;
+}
+
+.content {
+    background: var(--b100);
+}
+
+.content section {
+    padding-bottom: 0;
+}
+
+.content h2 {
+    margin-bottom: var(--space-lg);
+}
