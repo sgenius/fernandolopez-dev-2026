@@ -33,7 +33,19 @@
       "tag1": "Interactive",
       "title": "Mosaic",
       "slug": "A browser for real maps of imaginary places.",
-      "url": "/projects/mosaic"
+      "url": "/projects/mosaic",
+      "aboutLink": "About this project...",
+      "about": {
+        "title": "About Mosaic",
+        "theMap": "The Map",
+        "buildingTheMap": "Building the Map",
+        "scale": "Scale",
+        "digitizationAndCompression": "Digitization and Compression",
+        "theMosaicViewer": "The Mosaic Viewer",
+        "theFirstVersion": "The First Version",
+        "theCurrentVersion": "The Current Version",
+        "futurePlans": "Future Plans"
+      }
     },
     "tapestry": {
       "tag0": "Animation",

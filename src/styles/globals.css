@@ -505,6 +505,7 @@ main {
   background: var(--b900);
   padding: 1.75rem var(--page-px);
 }
+body:has(.page-no-footer) .site-footer { display: none; }
 .footer-wrapper {
   max-width: var(--max-width);
   margin: 0 auto;

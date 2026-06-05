@@ -34,7 +34,19 @@
       "tag1": "Interactividad",
       "title": "Mosaico",
       "slug": "Un navegador para mapas reales de lugares imaginarios.",
-      "url": "/projects/mosaic"
+      "url": "/projects/mosaic",
+      "aboutLink": "Acerca de este proyecto...",
+      "about": {
+        "title": "Acerca de Mosaico",
+        "theMap": "El mapa",
+        "buildingTheMap": "Construyendo el mapa",
+        "scale": "Escala",
+        "digitizationAndCompression": "Digitalización y compresión",
+        "theMosaicViewer": "El visor Mosaico",
+        "theFirstVersion": "La primera versión",
+        "theCurrentVersion": "La versión actual",
+        "futurePlans": "Planes futuros"
+      }
     },
     "tapestry": {
       "tag0": "Animación",
