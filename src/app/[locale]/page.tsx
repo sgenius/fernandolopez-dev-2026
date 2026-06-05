@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import NextLink from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -44,9 +44,9 @@ export default function HomePage() {
           </h1>
           <p className="hero-tagline">{t("tagline")}</p>
           <div className="hero-cta">
-            <Link href="/#contact" className="btn btn-amber">
+            <NextLink href="/#contact" className="btn btn-amber">
               {tContact("title")}
-            </Link>
+            </NextLink>
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function HomePage() {
           <div className="cards">
             {
               ["countries", "mosaic", "tapestry"].map((projectKey) => (
-                <Link href={tProjects(`${projectKey}.url`)} className="card" key={projectKey}>
+                <NextLink href={tProjects(`${projectKey}.url`)} className="card" key={projectKey}>
                   <header className="card-header">
                     <h3 className="card-header-title">{tProjects(`${projectKey}.title`)}</h3>
                   </header>
@@ -85,7 +85,7 @@ export default function HomePage() {
                       {generateTagsOutput(tProjects, projectKey)}
                     </section>
                   </div>
-                </Link>
+                </NextLink>
               ))
             }
           </div>
@@ -101,7 +101,7 @@ export default function HomePage() {
           </header>
           <div className="cards">
             {["0", "1", "2"].map((key) => (
-              <Link href={tPublications(`pubs.${key}.url`)} target="_blank" rel="noopener noreferrer" key={key} className="card">
+              <NextLink href={tPublications(`pubs.${key}.url`)} target="_blank" rel="noopener noreferrer" key={key} className="card">
                 <header className="card-header">
                   <h3 className="card-header-title">{tPublications(`pubs.${key}.title`)}</h3>
                 </header>
@@ -127,7 +127,7 @@ export default function HomePage() {
                     </section>
                   </div>
                 </div>
-              </Link>
+              </NextLink>
             ))}
           </div>
         </section>

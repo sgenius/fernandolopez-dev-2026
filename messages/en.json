@@ -45,6 +45,28 @@
         "theFirstVersion": "The First Version",
         "theCurrentVersion": "The Current Version",
         "futurePlans": "Future Plans"
+      },
+      "legend": {
+        "title": "Legend",
+        "river": "River",
+        "bodyOfWater": "Body of water",
+        "levelCurve": "Level curve. 1 unit = 2 meters",
+        "freeway": "Freeway / high speed road",
+        "mainRoad": "National road / main road",
+        "secondaryRoad": "State road / secondary road",
+        "otherRoad": "Other road, paved",
+        "unpavedRoad": "Other road, unpaved",
+        "railroad": "Railroad",
+        "protectedArea": "Protected natural area",
+        "urbanArea": "Urban area",
+        "airport": "Airport",
+        "countryBorder": "Country border",
+        "stateBorder": "State border",
+        "municipalityBorder": "Municipality border",
+        "stateCapital": "State capital",
+        "municipalityCapital": "Municipality capital",
+        "otherTown": "Other town",
+        "municipalityName": "Municipality name"
       }
     },
     "tapestry": {

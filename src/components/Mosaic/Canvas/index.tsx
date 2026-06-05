@@ -49,8 +49,8 @@ const Mosaic2Canvas: React.FC<{ useLayers?: boolean }> = ({ useLayers = false })
     // https://konvajs.org/docs/sandbox/Multi-touch_Scale_Stage.html
     const onTouchMove = (evt: KonvaEventObject<TouchEvent>) => {
         evt.evt.preventDefault();
-        let touch1 = evt.evt.touches[0];
-        let touch2 = evt.evt.touches[1];
+        const touch1 = evt.evt.touches[0];
+        const touch2 = evt.evt.touches[1];
         const target = evt.target;
         const stage = target.getStage();
         if (!stage) {

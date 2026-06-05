@@ -87,15 +87,6 @@
         -3px -3px 3px #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-    .line.levelCurve > div {
-        text-shadow:
-            3px 3px 3px #000,
-            -3px 3px 3px #000,
-            3px -3px 3px #000,
-            -3px -3px 3px #000;
-    }
-}
 
 .line.freeway::after {
     border-bottom: 3px double #efc15e;

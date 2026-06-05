@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import NextLink from "next/link";
 import { getTranslations, getLocale } from "next-intl/server";
 import styles from "./mosaicAbout.module.css";
 
@@ -12,7 +12,7 @@ export default async function MosaicPage() {
     <>
       <header className={`block-wrapper ${styles.aboutHeader}`}>
         <section id="back-to-home" >
-          {locale === "en" ? "Projects" : "Proyectos"}{` `}&gt;{` `}<Link href="/projects/mosaic"><span className={styles.projectName}>{tMosaic("title")}</span></Link>{` `}&gt;{` `}{tMosaic("about.title")}
+          {locale === "en" ? "Projects" : "Proyectos"}{` `}&gt;{` `}<NextLink href="/projects/mosaic"><span className={styles.projectName}>{tMosaic("title")}</span></NextLink>{` `}&gt;{` `}{tMosaic("about.title")}
         </section>
         <section className="section">
           <h1 className="section-title">{tMosaic("title")}</h1>
@@ -25,12 +25,12 @@ export default async function MosaicPage() {
           { locale === "en" ?
             <>
                 <p>I&apos;ve loved maps since I was a child. I tend to doodle geographical forms, which sometimes matured into imaginary places.</p>
-                <p>At some point, inspired by <Link href='http://www.jerrysmap.com/' target="_blank" rel="noopener noreferrer">Jerry&apos;s Map</Link>, I started a long term project to have these places live in a world to discover.</p>
+                <p>At some point, inspired by <NextLink href='http://www.jerrysmap.com/' target="_blank" rel="noopener noreferrer">Jerry&apos;s Map</NextLink>, I started a long term project to have these places live in a world to discover.</p>
             </>
           : 
             <>
                 <p>Desde niño me gustan los mapas. Tiendo a dibujar formas geográficas que a veces se convierten en lugares imaginarios.</p>
-                <p>En algún momento, inspirado por <Link href='http://www.jerrysmap.com/' target="_blank" rel="noopener noreferrer">Jerry&apos;s Map</Link>, comencé un proyecto a largo plazo para tener estos lugares vivos en un mundo para descubrir.</p>
+                <p>En algún momento, inspirado por <NextLink href='http://www.jerrysmap.com/' target="_blank" rel="noopener noreferrer">Jerry&apos;s Map</NextLink>, comencé un proyecto a largo plazo para tener estos lugares vivos en un mundo para descubrir.</p>
             </>
           }
           <h3>{t("buildingTheMap")}</h3>
@@ -66,13 +66,13 @@ export default async function MosaicPage() {
           <Image className={styles.horizontalLeft} src="/images/current-scale-card.jpg" alt={locale === "en" ? "A card showing the coastline of San Francisco and a scale reference. The card is on a desk. A pen and a lamp are partially visible." : "Una tarjeta que muestra la costa de San Francisco y una referencia de escala. La tarjeta está sobre un escritorio. Una pluma y una lámpara son parcialmente visibles."} title={locale === "en" ? "A card showing the coastline of San Francisco and a scale reference." : "Una tarjeta que muestra la costa de San Francisco y una referencia de escala."}  width={688} height={516} />
           { locale === "en" ?
             <>
-                <p>Approximately 1:300000. In the physical version, 5 cm represent 15 km. This is about a zoom level of 10.8 if viewing San Francisco in Google Maps or <Link href="https://www.openstreetmap.org/#map=11/37.7959/-122.1772" target="_blank" rel="noopener noreferrer">OpenStreetMap.</Link></p>
+                <p>Approximately 1:300000. In the physical version, 5 cm represent 15 km. This is about a zoom level of 10.8 if viewing San Francisco in Google Maps or <NextLink href="https://www.openstreetmap.org/#map=11/37.7959/-122.1772" target="_blank" rel="noopener noreferrer">OpenStreetMap.</NextLink></p>
                 <p>For orography, there are level curves every 50 units. Each unit is two meters. This means each curve represents a 100m elevation change.</p>
                 <p>On a web map, zoom changes with latitude. This is not true of this map: the zoom is constant, as if the planet were a cylinder.</p>
             </>
           :
             <>
-                <p>Aproximadamente 1:300000. En la versión física, 5 cm representan 15 km. Esto equivale a un nivel de zoom de aproximadamente 10.8 al ver San Francisco en Google Maps u <Link href="https://www.openstreetmap.org/#map=11/37.7959/-122.1772" target="_blank" rel="noopener noreferrer">OpenStreetMap.</Link></p>
+                <p>Aproximadamente 1:300000. En la versión física, 5 cm representan 15 km. Esto equivale a un nivel de zoom de aproximadamente 10.8 al ver San Francisco en Google Maps u <NextLink href="https://www.openstreetmap.org/#map=11/37.7959/-122.1772" target="_blank" rel="noopener noreferrer">OpenStreetMap.</NextLink></p>
                 <p>Para la orografía, hay curvas de nivel cada 50 unidades. Cada unidad equivale a dos metros. Esto significa que cada curva representa un cambio de elevación de 100 m.</p>
                 <p>En un mapa web, el zoom cambia con la latitud. Esto no ocurre en este mapa: el zoom es constante, como si el planeta fuera un cilindro.</p>
             </>
@@ -83,12 +83,12 @@ export default async function MosaicPage() {
             { locale === "en" ?
               <>
                   <p>When I had around 200 map pieces, I got myself a scanner and started digitizing. The scan process results in .png files of <em>about</em> 1500x900 pixels, around 400kb each.</p>
-                  <p>Out of these, zoomed-out &quot;thumbnail&quot; versions were created using Python&apos;s <Link href="https://pillow.readthedocs.io/" target="_blank" rel="noopener noreferrer">Pillow</Link> library; each thumb measures no more than 8kb.</p>
+                  <p>Out of these, zoomed-out &quot;thumbnail&quot; versions were created using Python&apos;s <NextLink href="https://pillow.readthedocs.io/" target="_blank" rel="noopener noreferrer">Pillow</NextLink> library; each thumb measures no more than 8kb.</p>
               </>
             :
               <>
                   <p>Cuando tenía alrededor de 200 piezas de mapa, conseguí un escáner y comencé a digitalizar. El proceso de escaneo genera archivos .png de <em>aproximadamente</em> 1500x900 píxeles, de unos 400 kb cada uno.</p>
-                  <p>A partir de estas, se crearon versiones &quot;miniatura&quot; alejadas usando la biblioteca <Link href="https://pillow.readthedocs.io/" target="_blank" rel="noopener noreferrer">Pillow</Link> de Python; cada miniatura no supera los 8 kb.</p>
+                  <p>A partir de estas, se crearon versiones &quot;miniatura&quot; alejadas usando la biblioteca <NextLink href="https://pillow.readthedocs.io/" target="_blank" rel="noopener noreferrer">Pillow</NextLink> de Python; cada miniatura no supera los 8 kb.</p>
               </>
             }
         </section>
@@ -99,22 +99,22 @@ export default async function MosaicPage() {
               <>
                   <p>The viewer exists to inform about the map as a whole (without having to lay down all cards in the floor) and to show it to the world. Zooming and panning are included; at low zoom levels, the thumb images are used; the image set is swapped when the zoom is high enough.</p>
                   <h3>{t("theFirstVersion")}</h3>
-                  <p>This was created with <Link href="http://fabricjs.com/" target="_blank" rel="noopener noreferrer">Fabric</Link>, chosen for its OOP-style abstractions on top of the canvas API and its powerful utilities.</p>
-                  <p>Fabric worked great, but it has its challenges. Using it with React required a wrapper based on <Link href="https://stackoverflow.com/questions/37565041/how-can-i-use-fabric-js-with-react">this</Link>.&nbsp;Also, swapping between image sets when zooming presented memory issues.</p>
+                  <p>This was created with <NextLink href="http://fabricjs.com/" target="_blank" rel="noopener noreferrer">Fabric</NextLink>, chosen for its OOP-style abstractions on top of the canvas API and its powerful utilities.</p>
+                  <p>Fabric worked great, but it has its challenges. Using it with React required a wrapper based on <NextLink href="https://stackoverflow.com/questions/37565041/how-can-i-use-fabric-js-with-react">this</NextLink>.&nbsp;Also, swapping between image sets when zooming presented memory issues.</p>
                   <h3>{t("theCurrentVersion")}</h3>
-                  <p>When rebuilding this website in 2023, Fabric would not play well with Next.js, so I moved to <Link href="https://konvajs.org/">Konva</Link>.</p>
-                  <p>Thanks to <Link href="https://konvajs.org/docs/react/Intro.html" target="_blank" rel="noopener noreferrer">Konva&apos;s React integration</Link>, the memory management problem was gone. Each tile is a component, and tilesets are set declaratively; React takes care of the rest.</p>
+                  <p>When rebuilding this website in 2023, Fabric would not play well with Next.js, so I moved to <NextLink href="https://konvajs.org/">Konva</NextLink>.</p>
+                  <p>Thanks to <NextLink href="https://konvajs.org/docs/react/Intro.html" target="_blank" rel="noopener noreferrer">Konva&apos;s React integration</NextLink>, the memory management problem was gone. Each tile is a component, and tilesets are set declaratively; React takes care of the rest.</p>
                   <p>For the 2026 website rebuild I focused on porting the existing functionality and updating dependencies.</p>
               </>
             :
               <>
                   <p>El visor existe para mostrar el mapa en su conjunto (sin tener que extender todas las tarjetas en el piso) y para enseñarlo al mundo. Incluye zoom y desplazamiento; en niveles de zoom bajos se usan las imágenes en miniatura; el conjunto de imágenes se intercambia cuando el zoom es suficientemente alto.</p>
                   <h3>{t("theFirstVersion")}</h3>
-                  <p>Esto se creó con <Link href="http://fabricjs.com/" target="_blank" rel="noopener noreferrer">Fabric</Link>, elegido por sus abstracciones de estilo orientado a objetos sobre la API de canvas y sus poderosas utilidades.</p>
-                  <p>Fabric funcionó muy bien, pero tiene sus desafíos. Usarlo con React requirió un envoltorio basado en <Link href="https://stackoverflow.com/questions/37565041/how-can-i-use-fabric-js-with-react">esto</Link>.&nbsp;Además, el intercambio entre conjuntos de imágenes al hacer zoom presentaba problemas de memoria.</p>
+                  <p>Esto se creó con <NextLink href="http://fabricjs.com/" target="_blank" rel="noopener noreferrer">Fabric</NextLink>, elegido por sus abstracciones de estilo orientado a objetos sobre la API de canvas y sus poderosas utilidades.</p>
+                  <p>Fabric funcionó muy bien, pero tiene sus desafíos. Usarlo con React requirió un envoltorio basado en <NextLink href="https://stackoverflow.com/questions/37565041/how-can-i-use-fabric-js-with-react">esto</NextLink>.&nbsp;Además, el intercambio entre conjuntos de imágenes al hacer zoom presentaba problemas de memoria.</p>
                   <h3>{t("theCurrentVersion")}</h3>
-                  <p>Al reconstruir este sitio web en 2023, Fabric no se llevaba bien con Next.js, así que me cambié a <Link href="https://konvajs.org/">Konva</Link>.</p>
-                  <p>Gracias a <Link href="https://konvajs.org/docs/react/Intro.html" target="_blank" rel="noopener noreferrer">la integración de Konva con React</Link>, el problema de gestión de memoria desapareció. Cada tesela es un componente y los conjuntos de teselas se definen de forma declarativa; React se encarga del resto.</p>
+                  <p>Al reconstruir este sitio web en 2023, Fabric no se llevaba bien con Next.js, así que me cambié a <NextLink href="https://konvajs.org/">Konva</NextLink>.</p>
+                  <p>Gracias a <NextLink href="https://konvajs.org/docs/react/Intro.html" target="_blank" rel="noopener noreferrer">la integración de Konva con React</NextLink>, el problema de gestión de memoria desapareció. Cada tesela es un componente y los conjuntos de teselas se definen de forma declarativa; React se encarga del resto.</p>
                   <p>Para la reconstrucción del sitio web de 2026 me enfoqué en portar la funcionalidad existente y actualizar las dependencias.</p>
               </>
             }

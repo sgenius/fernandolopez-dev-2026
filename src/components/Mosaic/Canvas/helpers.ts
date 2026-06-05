@@ -49,7 +49,7 @@ interface OnStageWheelParams {
 // https://konvajs.org/docs/sandbox/Zooming_Relative_To_Pointer.html#
 export const wheelHandler = ({ evt, dispatch }: OnStageWheelParams) => {
     const { scaleBy } = MOSAIC_DATA;
-    evt.evt.preventDefault;
+    evt.evt.preventDefault();
 
     const stage = evt.currentTarget.getStage();
     if (!stage) {

@@ -46,6 +46,28 @@
         "theFirstVersion": "La primera versión",
         "theCurrentVersion": "La versión actual",
         "futurePlans": "Planes futuros"
+      },
+      "legend": {
+        "title": "Leyenda",
+        "river": "Río",
+        "bodyOfWater": "Cuerpo de agua",
+        "levelCurve": "Curva de nivel. 1 unidad = 2 metros",
+        "freeway": "Autopista / carretera de alta velocidad",
+        "mainRoad": "Carretera nacional / carretera principal",
+        "secondaryRoad": "Carretera estatal / carretera secundaria",
+        "otherRoad": "Otra carretera, pavimentada",
+        "unpavedRoad": "Otra carretera, sin pavimentar",
+        "railroad": "Ferrocarril",
+        "protectedArea": "Área natural protegida",
+        "urbanArea": "Área urbana",
+        "airport": "Aeropuerto",
+        "countryBorder": "Límite nacional",
+        "stateBorder": "Límite estatal",
+        "municipalityBorder": "Límite municipal",
+        "stateCapital": "Capital estatal",
+        "municipalityCapital": "Capital municipal",
+        "otherTown": "Otra ciudad",
+        "municipalityName": "Nombre del municipio"
       }
     },
     "tapestry": {

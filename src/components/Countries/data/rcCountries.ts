@@ -1,4 +1,4 @@
-import { RcCountryData } from "@/pages/countries/defs";
+import { RcCountryData } from "@/components/Countries/defs";
 
 export const RC_COUNTRIES: RcCountryData[] = [
     {

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { locales, type Locale } from "@/i18n/config";
@@ -28,19 +28,19 @@ export function Nav({ locale }: NavProps) {
       </a>
       <nav className="site-nav" aria-label="Main navigation">
         <div className="nav-inner">
-          <Link href="/" className="nav-logo" aria-label="Fernando L&oacute;pez — home">
+          <NextLink href="/" className="nav-logo" aria-label="Fernando L&oacute;pez — home">
             <span className="nav-logo-name">Fernando L&oacute;pez</span>
             <span className="nav-logo-domain" aria-hidden="true">fernandolopez.dev</span>
-          </Link>
+          </NextLink>
 
           <ul className="nav-links" role="list">
             {links.map(({ href, label }) => {
               const isActive = href === "/" ? localelessPath === "/" : localelessPath.startsWith(href);
               return (
                 <li key={href}>
-                  <Link href={href} aria-current={isActive ? "page" : undefined}>
+                  <NextLink href={href} aria-current={isActive ? "page" : undefined}>
                     {label}
-                  </Link>
+                  </NextLink>
                 </li>
               );
             })}
@@ -50,9 +50,9 @@ export function Nav({ locale }: NavProps) {
             {locales.map((l) => {
               const targetPath = `/${l}${localelessPath === "/" ? "" : localelessPath}`;
               return (
-                <Link key={l} href={targetPath} aria-current={l === locale ? "true" : undefined} lang={l}>
+                <NextLink key={l} href={targetPath} aria-current={l === locale ? "true" : undefined} lang={l}>
                   {l.toUpperCase()}
-                </Link>
+                </NextLink>
               );
             })}
           </nav>

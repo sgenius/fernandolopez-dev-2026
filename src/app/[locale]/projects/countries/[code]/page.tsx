@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import NextLink from "next/link";
 
 import { RcCountryData } from "@/components/Countries/defs";
 import { RC_COUNTRIES_BY_CCA3 } from "@/components/Countries/data/rcCountries";
 import CountryLink from "@/components/Countries/CountryLink";
-import { Link } from "@/components/ui/Link";
 import { RcCountryIdd, RcCountryImage } from "@/components/Countries/defs";
 import { roundDec, largeNumberFormat } from '@/helpers/format';
 import styles from "./countryPage.module.css";
@@ -27,7 +27,7 @@ async function CountryPage({ params }: { params: Promise<{ code: string }> }) {
     <>
       <div className={`block-wrapper ${styles.backToHome}`}>
         <section id="back-to-home" >
-          Projects{` `}&gt;{` `}<Link href="/projects/countries"><span className={styles.backToHomeAppName}>The World&apos;s Countries</span></Link>{` `}&gt;{` `}{rcCountryData?.name?.common ?? 'Country Name'}
+          Projects{` `}&gt;{` `}<NextLink href="/projects/countries"><span className={styles.backToHomeAppName}>The World&apos;s Countries</span></NextLink>{` `}&gt;{` `}{rcCountryData?.name?.common ?? 'Country Name'}
         </section>
       </div>
       <header className={`${styles.headerCol} block-wrapper`}>
