@@ -77,6 +77,13 @@
       "title": "El tapiz Unicode",
       "slug": "Un juguete animado inspirado en interfaces retrofuturistas.",
       "url": "https://bi3vr.csb.app/"
+    },
+    "panels": {
+      "tag0": "Animación",
+      "tag1": "Generación de código",
+      "title": "Panels",
+      "slug": "Un juguete animado que genera paneles de interfaz de ciencia ficción retro. Incluye personalización manual vía menús de contexto; guarda estado en la URL. Código generado por Claude Opus 4.8",
+      "url": "https://sgenius.github.io/panels/"
     }
   },
   "publications": {

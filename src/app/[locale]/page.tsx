@@ -13,6 +13,9 @@ export default function HomePage() {
   const tProjects = useTranslations("projects");
   const tContact = useTranslations("contact");
 
+  const projects = ["countries", "mosaic", "tapestry", "panels"];
+  const externalProjects = ["tapestry", "panels"];
+
   const generateTagsOutput = (translator: (key: string) => string, path: string) => {
     return ["tag0", "tag1"].map((tagKey) => {
       try {
@@ -69,7 +72,7 @@ export default function HomePage() {
           <p className="section-description">{tProjects("slug")}</p>
           <div className="cards">
             {
-              ["countries", "mosaic", "tapestry"].map((projectKey) => (
+              projects.map((projectKey) => (
                 <NextLink href={tProjects(`${projectKey}.url`)} className="card" key={projectKey}>
                   <header className="card-header">
                     <h3 className="card-header-title">{tProjects(`${projectKey}.title`)}</h3>
@@ -77,9 +80,9 @@ export default function HomePage() {
                   <div className="card-body">
                     <p className="card-description">{tProjects(`${projectKey}.slug`)}</p>
                     <hr className="card-divider" />
-                    <section className={`card-description-lower external-link-${projectKey === "tapestry" ? "external" : "internal"}`}>
-                      {projectKey === "tapestry" ? tProjects("visitProject") : tProjects("viewProject")}{` `}
-                      {projectKey === "tapestry" ? <span className="boxicons--arrow-out-up-right-square svg-icon-sm"></span> : null}
+                    <section className={`card-description-lower external-link-${externalProjects.includes(projectKey) ? "external" : "internal"}`}>
+                      {externalProjects.includes(projectKey) ? tProjects("visitProject") : tProjects("viewProject")}{` `}
+                      {externalProjects.includes(projectKey) ? <span className="boxicons--arrow-out-up-right-square svg-icon-sm"></span> : null}
                     </section>
                     <section className="tags">
                       {generateTagsOutput(tProjects, projectKey)}
